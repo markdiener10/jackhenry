@@ -1,0 +1,18 @@
+meta {
+  name: CurrentWeather
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.openweathermap.org/data/2.5/weather?lat={{LATITUDE}}&lon={{LONGITUDE}}&units={{UNITS}}&appid={{APIKEY}}
+  body: none
+  auth: none
+}
+
+query {
+  lat: {{LATITUDE}}
+  lon: {{LONGITUDE}}
+  units: {{UNITS}}
+  appid: {{APIKEY}}
+}
